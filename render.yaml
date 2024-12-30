@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    region: frankfurt # optional (defaults to oregon)
+    plan: free # optional (defaults to starter)
+    branch: main # optional (defaults to master)
+    numInstances: 1
+    healthCheckPath: /isrunning
+    envVars:
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: HOST_URL
+      - key: DB_POSTGRESDB_DATABASE
+        value: DB_NAME
+      - key: DB_POSTGRESDB_PORT
+        value: DB_PORT
+      - key: DB_POSTGRESDB_USER
+        value: DB_USER
+      - key: DB_POSTGRESDB_PASSWORD
+        value: DB_PASSWORD
+      - key: PORT
+        value: 5678
+      - key: N8N_LOG_LEVEL
+        value: info
+      - key: GENERIC_TIMEZONE
+        value: Europe/Paris
+      - key: TZ
+        value: Europe/Paris
+      - key: N8N_DEFAULT_LOCALE
+        value: fr
+      - key: N8N_ENCRYPTION_KEY
+        generateValue: true
+      - key: WEBHOOK_URL
+        value: TO_CHANGE

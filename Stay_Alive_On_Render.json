@@ -1,0 +1,67 @@
+{
+  "name": "Stay Alive On Render",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 10
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "bc704672-6091-468e-a3f5-fd6126a5cc01",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "url": "[healthCheckPath]",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "c53f0150-5a4e-4c04-8bf4-012622709fe9",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "none",
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": false,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "4621e74c-9e79-4e53-a724-102388f4fd67",
+  "meta": {
+    "instanceId": "3692f5473725095a1f5f640fb056890adf7e74eba7da6d6574028188e2057c10"
+  },
+  "id": "Rdt77lG09ncvJtnZ",
+  "tags": []
+}
