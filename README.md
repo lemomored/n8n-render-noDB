@@ -43,7 +43,7 @@ As you are on Render free plan, the instance will always be paused after 15min o
 7. Activate
 
 
-Now Enjoy for free forever (If render.com and SupaBase maintain their free plans)
+Now Enjoy for free and forever (If render.com and SupaBase maintain their free plans)
 
 
 Thanks to Antoine Deschamps for the inspiration
