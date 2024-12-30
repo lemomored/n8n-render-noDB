@@ -36,7 +36,7 @@ As you are on Render free plan, the instance will always be paused after 15min o
 1. Create a new workflow
 2. Copy the content of the file "Stay_Alive_On_Render.json"
 3. Paste it inside the empty workfow
-4. Open the "HTTP Request" node and enter this url : https://[your service URL]/isrunning
+4. Open the "HTTP Request" node and enter this url : https://[your service URL]/healthz
 (Your service URL is the same value you copied in the environement variable WEBHOOK_URL [******.onrender.com] )
 5. Rename your workflow
 6. Save
