@@ -34,3 +34,5 @@ services:
         generateValue: true
       - key: WEBHOOK_URL
         value: TO_CHANGE
+      - key: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
+        value: true
